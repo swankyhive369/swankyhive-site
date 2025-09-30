@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwankyHive – Eco‑Conscious Streetwear</title>
+  <style>
+    /* Base styles */
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      background-color: #fafafa;
+      line-height: 1.6;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1, h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 700;
+      margin: 0;
+    }
+    h2 {
+      font-size: 2.2rem;
+    }
+    p {
+      margin: 0 0 1rem;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 1.8rem;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    /* Hero section */
+    .hero {
+      background: linear-gradient(135deg, #0a0a0a, #1e1e1e);
+      color: #f5c242;
+      text-align: center;
+      padding: 6rem 1rem;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      letter-spacing: 1px;
+      margin-bottom: 0.8rem;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      color: #e7e7e7;
+      margin-bottom: 2.5rem;
+    }
+    .hero .cta-btn {
+      background-color: #f5c242;
+      color: #0a0a0a;
+      border: none;
+    }
+    .hero .cta-btn:hover {
+      background-color: #d4a535;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    /* Section styling */
+    section {
+      padding: 5rem 1rem;
+    }
+    section:nth-child(even) {
+      background-color: #f7f7f7;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 1.2rem;
+      color: #2b2b2b;
+    }
+    section p {
+      max-width: 850px;
+      margin: 0 auto 2.5rem;
+      text-align: center;
+      font-size: 1.05rem;
+      color: #4a4a4a;
+    }
+
+    /* Products section */
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .product-card {
+      flex: 1 1 280px;
+      max-width: 320px;
+      background-color: #ffffff;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    }
+    .product-title {
+      font-size: 1.4rem;
+      font-family: Georgia, "Times New Roman", serif;
+      color: #111;
+      margin-bottom: 0.5rem;
+    }
+    .product-card p {
+      color: #5a5a5a;
+      font-size: 0.95rem;
+    }
+    .product-card .btn {
+      margin-top: 1.2rem;
+      background-color: #0a0a0a;
+      color: #f5c242;
+      border: none;
+    }
+    .product-card .btn:hover {
+      background-color: #333;
+    }
+
+    /* Movement section */
+    .movement {
+      background-color: #fdf5e6;
+    }
+    .movement h2 {
+      color: #c29420;
+    }
+    .movement p {
+      color: #544a30;
+    }
+    .movement .fact {
+      font-style: italic;
+      margin-top: 1rem;
+      color: #5f552e;
+    }
+
+    /* Social section */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+    }
+    .social-links a {
+      font-size: 1.1rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      color: #ffffff;
+      font-weight: bold;
+    }
+    .social-instagram { background-color: #E1306C; }
+    .social-tiktok { background-color: #69C9D0; }
+
+    /* Footer */
+    footer {
+      background-color: #f5f5f5;
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    footer a { color: #666; text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>SwankyHive</h1>
+    <p>Eco‑Conscious Streetwear for the Bold</p>
+    <a href="https://www.etsy.com/shop/SwankyHive" class="btn cta-btn">Shop Now →</a>
+  </header>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      SwankyHive is more than clothing — it’s a movement. We design premium streetwear that blends exclusivity, sustainability, and purpose. Every piece reflects our mission to protect bees and our planet.
+    </p>
+  </section>
+
+  <section id="products">
+    <h2>Featured Products</h2>
+    <div class="products container">
+      <div class="product-card">
+        <div class="product-title">Premium Graphic Tee</div>
+        <p>Timeless design crafted with sustainable materials for a bold, modern look.</p>
+        <a href="https://www.etsy.com/shop/SwankyHive" class="btn">Shop Now</a>
+      </div>
+      <div class="product-card">
+        <div class="product-title">Luxury Hoodie</div>
+        <p>Comfort meets eco‑friendly craftsmanship in our signature hoodie.</p>
+        <a href="https://www.etsy.com/shop/SwankyHive" class="btn">Shop Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="movement" class="movement">
+    <h2>Join the Movement</h2>
+    <p>
+      Every purchase supports awareness around sustainability. We believe in creating beautiful apparel while promoting the importance of saving bees and protecting our ecosystems.
+    </p>
+    <p class="fact">Did you know? One out of every three bites of food depends on bees for pollination.</p>
+  </section>
+
+  <section id="community">
+    <h2>Join Our Community</h2>
+    <p>Follow us for drops, eco‑tips, and community shoutouts.</p>
+    <div class="social-links">
+      <!-- Updated Instagram username and placeholder TikTok link -->
+      <a href="https://www.instagram.com/swanky_hive" class="social-instagram">Instagram</a>
+      <!-- TikTok link will be updated once the account is created; using a placeholder for now -->
+      <a href="#" class="social-tiktok">TikTok (coming soon)</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 SwankyHive &nbsp;|&nbsp; <a href="mailto:swankyhive@gmail.com">swankyhive@gmail.com</a>
+  </footer>
+</body>
+</html>
