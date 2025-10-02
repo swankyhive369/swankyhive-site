@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwankyHive – Shop Collection</title>
+  <style>
+    :root {
+      --primary: #f5c242;
+      --dark: #0a0a0a;
+      --dark-light: #1e1e1e;
+      --text-color: #222;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; line-height: 1.6; color: var(--text-color); }
+    a { color: inherit; text-decoration: none; }
+    header { background: var(--dark); color: #fff; display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; position:sticky; top:0; z-index:1000; }
+    .logo { display:flex; align-items:center; gap:0.5rem; font-size:1.3rem; font-weight:bold; color: var(--primary); }
+    .logo img { width:32px; height:32px; }
+    nav ul { list-style:none; display:flex; gap:1.5rem; margin:0; padding:0; }
+    nav ul li a { color:#fff; font-weight:600; transition: color 0.3s; }
+    nav ul li a:hover, nav ul li a.active { color: var(--primary); }
+    .hero {
+      background: linear-gradient(135deg, var(--dark), var(--dark-light));
+      color: var(--primary);
+      padding: 5rem 1rem 4rem;
+      text-align: center;
+    }
+    .hero h1 { font-size: 3rem; margin-bottom: 0.6rem; }
+    .hero p { color:#e2e2e2; max-width: 700px; margin: 0 auto 2rem; font-size:1.1rem; }
+    .section { padding: 4rem 1.5rem; max-width: 1200px; margin: 0 auto; }
+    .section h2 { text-align:center; font-size:2rem; margin-bottom:1.5rem; }
+    .categories {
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:2rem;
+    }
+    .category {
+      background:#fff;
+      border-radius:8px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+      width:280px;
+      text-align:center;
+      overflow:hidden;
+    }
+    .category img {
+      width:100%;
+      height:200px;
+      object-fit: cover;
+    }
+    .category h3 { margin: 1rem 0 0.5rem; font-size:1.3rem; }
+    .category a.btn {
+      display:inline-block;
+      margin: 0.5rem auto 1rem;
+      padding:0.6rem 1rem;
+      background: var(--primary);
+      color: var(--dark);
+      border-radius:4px;
+      font-weight:bold;
+      transition: background .3s;
+    }
+    .category a.btn:hover { background: #d4a535; }
+    footer { background: var(--dark); color:#fff; padding:2rem 1.5rem; text-align:center; font-size:0.9rem; }
+    footer .socials { margin:1rem 0; }
+    footer .socials a { margin:0 0.5rem; color: var(--primary); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="sunflower_icon_transparent.png" alt="logo">
+      SwankyHive
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html" class="active">Shop</a></li>
+        <li><a href="bee.html">Bee Knowledge</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero">
+    <h1>Shop Collection</h1>
+    <p>Explore our premium eco‑conscious apparel. Each purchase helps save the bees and supports sustainable fashion.</p>
+  </section>
+  <section class="section">
+    <h2>Our Products</h2>
+    <div class="categories">
+      <div class="category">
+        <img src="2d75fa17-953c-453e-a32b-fc8080cc221b.png" alt="Hoodies">
+        <h3>Hoodies</h3>
+        <a href="https://www.etsy.com/shop/SwankyHive" class="btn">Shop Hoodies</a>
+      </div>
+      <div class="category">
+        <img src="05de81e4-b510-42b5-af59-afc0c7ede982.png" alt="T‑Shirts">
+        <h3>T‑Shirts</h3>
+        <a href="https://www.etsy.com/shop/SwankyHive" class="btn">Shop T‑Shirts</a>
+      </div>
+      <div class="category">
+        <img src="32481d6e-6e10-4968-88d2-b37541dccedf.png" alt="Sweatshirts">
+        <h3>Sweatshirts</h3>
+        <a href="https://www.etsy.com/shop/SwankyHive" class="btn">Shop Sweatshirts</a>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>© 2025 SwankyHive. All rights reserved.</p>
+    <div class="socials">
+      <a href="https://www.instagram.com/swanky_hive" target="_blank">Instagram</a> |
+      <a href="#" target="_blank" title="TikTok coming soon">TikTok</a>
+    </div>
+    <p>Premium eco‑conscious apparel designed to save the bees and protect our planet.</p>
+  </footer>
+</body>
+</html>

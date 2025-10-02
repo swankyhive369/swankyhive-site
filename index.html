@@ -3,230 +3,264 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SwankyHive – Eco‑Conscious Streetwear</title>
+  <title>SwankyHive – Wear the Difference</title>
   <style>
-    /* Base styles */
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #222;
-      background-color: #fafafa;
-      line-height: 1.6;
-    }
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-    h1, h2 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-weight: 700;
-      margin: 0;
-    }
-    h2 {
-      font-size: 2.2rem;
-    }
-    p {
-      margin: 0 0 1rem;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem;
-    }
-    .btn {
-      display: inline-block;
-      padding: 0.9rem 1.8rem;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all 0.25s ease;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    :root {
+      --primary: #f5c242; /* golden yellow */
+      --dark: #0a0a0a;
+      --dark-light: #1e1e1e;
+      --light-bg: #f7f7f7;
+      --text-color: #222;
     }
 
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; line-height: 1.6; color: var(--text-color); background: #ffffff; }
+    a { color: inherit; text-decoration: none; }
+    /* Header navigation */
+    header {
+      background: var(--dark);
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.4rem;
+      font-weight: bold;
+      gap: 0.5rem;
+      color: var(--primary);
+    }
+    .logo img {
+      width: 32px;
+      height: 32px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      color: #fff;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: var(--primary);
+    }
     /* Hero section */
     .hero {
-      background: linear-gradient(135deg, #0a0a0a, #1e1e1e);
-      color: #f5c242;
+      background: linear-gradient(135deg, var(--dark), var(--dark-light));
+      color: var(--primary);
+      padding: 6rem 1rem 5rem;
       text-align: center;
-      padding: 6rem 1rem;
+      position: relative;
+      overflow: hidden;
     }
     .hero h1 {
-      font-size: 3.5rem;
-      letter-spacing: 1px;
+      font-size: 3.2rem;
       margin-bottom: 0.8rem;
     }
     .hero p {
-      font-size: 1.25rem;
-      color: #e7e7e7;
-      margin-bottom: 2.5rem;
+      color: #e2e2e2;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
     }
-    .hero .cta-btn {
-      background-color: #f5c242;
-      color: #0a0a0a;
+    .hero .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.6rem;
+      border-radius: 4px;
+      font-weight: bold;
       border: none;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+      text-decoration: none;
     }
-    .hero .cta-btn:hover {
-      background-color: #d4a535;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    .btn.primary {
+      background: var(--primary);
+      color: var(--dark);
     }
-
-    /* Section styling */
-    section {
-      padding: 5rem 1rem;
+    .btn.primary:hover {
+      background: #d4a535;
     }
-    section:nth-child(even) {
-      background-color: #f7f7f7;
+    .btn.secondary {
+      background: transparent;
+      border: 2px solid var(--primary);
+      color: var(--primary);
     }
-    section h2 {
+    .btn.secondary:hover {
+      background: var(--primary);
+      color: var(--dark);
+    }
+    /* Floating sunflowers */
+    .sunflower {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      opacity: 0.7;
+      background-image: url('sunflower_icon_transparent.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      animation: float 25s linear infinite;
+    }
+    /* Different positions and delays for each sunflower */
+    .sf1 { top: 80%; left: 10%; animation-delay: 0s; }
+    .sf2 { top: 90%; left: 40%; animation-delay: 5s; }
+    .sf3 { top: 85%; left: 70%; animation-delay: 10s; }
+    .sf4 { top: 95%; left: 20%; animation-delay: 15s; }
+    .sf5 { top: 88%; left: 60%; animation-delay: 20s; }
+    @keyframes float {
+      0% { transform: translateY(0) translateX(0); }
+      100% { transform: translateY(-100vh) translateX(50px); }
+    }
+    /* Latest arrivals section */
+    .section {
+      padding: 4rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section h2 {
       text-align: center;
       margin-bottom: 1.2rem;
-      color: #2b2b2b;
+      font-size: 2rem;
     }
-    section p {
-      max-width: 850px;
-      margin: 0 auto 2.5rem;
-      text-align: center;
-      font-size: 1.05rem;
-      color: #4a4a4a;
-    }
-
-    /* Products section */
     .products {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 2rem;
+      margin-top: 2rem;
     }
-    .product-card {
-      flex: 1 1 280px;
-      max-width: 320px;
-      background-color: #ffffff;
-      border: 1px solid #eee;
-      border-radius: 10px;
-      padding: 2rem 1.5rem;
+    .product {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      width: 280px;
       text-align: center;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-      transition: transform 0.2s ease;
     }
-    .product-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
     }
-    .product-title {
-      font-size: 1.4rem;
-      font-family: Georgia, "Times New Roman", serif;
-      color: #111;
-      margin-bottom: 0.5rem;
+    .product h3 {
+      margin: 1rem 0 0.5rem;
+      font-size: 1.2rem;
     }
-    .product-card p {
-      color: #5a5a5a;
-      font-size: 0.95rem;
-    }
-    .product-card .btn {
-      margin-top: 1.2rem;
-      background-color: #0a0a0a;
-      color: #f5c242;
-      border: none;
-    }
-    .product-card .btn:hover {
-      background-color: #333;
-    }
-
-    /* Movement section */
-    .movement {
-      background-color: #fdf5e6;
-    }
-    .movement h2 {
-      color: #c29420;
-    }
-    .movement p {
-      color: #544a30;
-    }
-    .movement .fact {
-      font-style: italic;
-      margin-top: 1rem;
-      color: #5f552e;
-    }
-
-    /* Social section */
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 3rem;
-    }
-    .social-links a {
-      font-size: 1.1rem;
-      padding: 0.6rem 1.2rem;
-      border-radius: 5px;
-      color: #ffffff;
+    .product .product-btn {
+      display: inline-block;
+      margin: 0.5rem auto 1rem;
+      padding: 0.6rem 1rem;
+      width: 80%;
+      background: var(--primary);
+      color: var(--dark);
+      border-radius: 4px;
       font-weight: bold;
+      transition: background 0.3s;
     }
-    .social-instagram { background-color: #E1306C; }
-    .social-tiktok { background-color: #69C9D0; }
-
+    .product .product-btn:hover {
+      background: #d4a535;
+    }
     /* Footer */
     footer {
-      background-color: #f5f5f5;
-      padding: 2rem 1rem;
+      background: var(--dark);
+      color: #fff;
+      padding: 2rem 1.5rem;
       text-align: center;
       font-size: 0.9rem;
-      color: #666;
     }
-    footer a { color: #666; text-decoration: underline; }
+    footer .socials {
+      margin: 1rem 0;
+    }
+    footer .socials a {
+      margin: 0 0.5rem;
+      color: var(--primary);
+      font-size: 1.4rem;
+    }
+    footer a {
+      color: var(--primary);
+    }
   </style>
 </head>
 <body>
-  <header class="hero">
-    <h1>SwankyHive</h1>
-    <p>Eco‑Conscious Streetwear for the Bold</p>
-    <a href="https://www.etsy.com/shop/SwankyHive" class="btn cta-btn">Shop Now →</a>
+  <header>
+    <div class="logo">
+      <img src="sunflower_icon_transparent.png" alt="SwankyHive logo">
+      SwankyHive
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="bee.html">Bee Knowledge</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>
-      SwankyHive is more than clothing — it’s a movement. We design premium streetwear that blends exclusivity, sustainability, and purpose. Every piece reflects our mission to protect bees and our planet.
-    </p>
-  </section>
-
-  <section id="products">
-    <h2>Featured Products</h2>
-    <div class="products container">
-      <div class="product-card">
-        <div class="product-title">Premium Graphic Tee</div>
-        <p>Timeless design crafted with sustainable materials for a bold, modern look.</p>
-        <a href="https://www.etsy.com/shop/SwankyHive" class="btn">Shop Now</a>
-      </div>
-      <div class="product-card">
-        <div class="product-title">Luxury Hoodie</div>
-        <p>Comfort meets eco‑friendly craftsmanship in our signature hoodie.</p>
-        <a href="https://www.etsy.com/shop/SwankyHive" class="btn">Shop Now</a>
-      </div>
+  <section class="hero">
+    <!-- Floating sunflowers -->
+    <div class="sunflower sf1"></div>
+    <div class="sunflower sf2"></div>
+    <div class="sunflower sf3"></div>
+    <div class="sunflower sf4"></div>
+    <div class="sunflower sf5"></div>
+    <h1>Wear the Difference</h1>
+    <p>Premium eco‑conscious apparel with a mission to save the bees and protect our planet. Join us in making fashion a force for positive change.</p>
+    <div class="buttons">
+      <a href="https://www.etsy.com/shop/SwankyHive" class="btn primary">Shop Collection</a>
+      <a href="about.html" class="btn secondary">Our Mission</a>
     </div>
   </section>
 
-  <section id="movement" class="movement">
-    <h2>Join the Movement</h2>
-    <p>
-      Every purchase supports awareness around sustainability. We believe in creating beautiful apparel while promoting the importance of saving bees and protecting our ecosystems.
-    </p>
-    <p class="fact">Did you know? One out of every three bites of food depends on bees for pollination.</p>
-  </section>
-
-  <section id="community">
-    <h2>Join Our Community</h2>
-    <p>Follow us for drops, eco‑tips, and community shoutouts.</p>
-    <div class="social-links">
-      <!-- Updated Instagram username and placeholder TikTok link -->
-      <a href="https://www.instagram.com/swanky_hive" class="social-instagram">Instagram</a>
-      <!-- TikTok link will be updated once the account is created; using a placeholder for now -->
-      <a href="#" class="social-tiktok">TikTok (coming soon)</a>
+  <section class="section">
+    <h2>Latest Arrivals</h2>
+    <div class="products">
+      <div class="product">
+        <img src="2d75fa17-953c-453e-a32b-fc8080cc221b.png" alt="Hoodie">
+        <h3>Eco‑Conscious Hoodie</h3>
+        <a href="https://www.etsy.com/shop/SwankyHive" class="product-btn">Shop Now</a>
+      </div>
+      <div class="product">
+        <img src="05de81e4-b510-42b5-af59-afc0c7ede982.png" alt="T‑Shirt">
+        <h3>Organic Honey Tee</h3>
+        <a href="https://www.etsy.com/shop/SwankyHive" class="product-btn">Shop Now</a>
+      </div>
+      <div class="product">
+        <img src="32481d6e-6e10-4968-88d2-b37541dccedf.png" alt="Sweatshirt">
+        <h3>Pollinator Sweatshirt</h3>
+        <a href="https://www.etsy.com/shop/SwankyHive" class="product-btn">Shop Now</a>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="shop.html" class="btn primary">View All Collections</a>
     </div>
   </section>
 
   <footer>
-    © 2025 SwankyHive &nbsp;|&nbsp; <a href="mailto:swankyhive@gmail.com">swankyhive369@gmail.com</a>
+    <p>© 2025 SwankyHive. All rights reserved.</p>
+    <div class="socials">
+      <a href="https://www.instagram.com/swanky_hive" target="_blank">Instagram</a> |
+      <a href="#" title="TikTok coming soon" target="_blank">TikTok</a>
+    </div>
+    <p>Premium eco‑conscious apparel designed to save the bees and protect our planet.</p>
   </footer>
 </body>
 </html>
-<!-- rebuild trigger -->

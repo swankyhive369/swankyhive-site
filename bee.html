@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwankyHive – Bee Knowledge</title>
+  <style>
+    :root {
+      --primary: #f5c242;
+      --dark: #0a0a0a;
+      --dark-light: #1e1e1e;
+      --text-color: #222;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; line-height:1.6; color: var(--text-color); }
+    a { color: inherit; text-decoration: none; }
+    header { background: var(--dark); color:#fff; display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; position:sticky; top:0; z-index:1000; }
+    .logo { display:flex; align-items:center; gap:0.5rem; font-size:1.3rem; font-weight:bold; color: var(--primary); }
+    .logo img { width:32px; height:32px; }
+    nav ul { list-style:none; display:flex; gap:1.5rem; margin:0; padding:0; }
+    nav ul li a { color:#fff; font-weight:600; transition: color 0.3s; }
+    nav ul li a:hover, nav ul li a.active { color: var(--primary); }
+    .hero {
+      background: linear-gradient(135deg, var(--dark), var(--dark-light));
+      color: var(--primary);
+      padding:5rem 1rem 4rem;
+      text-align:center;
+    }
+    .hero h1 { font-size: 3rem; margin-bottom:0.6rem; }
+    .hero p { color:#e2e2e2; max-width:700px; margin:0 auto 2rem; font-size:1.1rem; }
+    .section { padding:4rem 1.5rem; max-width:1200px; margin:0 auto; }
+    .section h2 { text-align:center; font-size:2rem; margin-bottom:1.5rem; }
+    .facts, .helps { display:flex; flex-wrap:wrap; gap:2rem; justify-content:center; margin-top:2rem; }
+    .card {
+      background:#fff;
+      border-radius:8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width:300px;
+      padding:1.5rem;
+      text-align:left;
+    }
+    .card .icon {
+      width:50px;
+      height:50px;
+      border-radius:50%;
+      background: var(--primary);
+      color: var(--dark);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:bold;
+      font-size:1.2rem;
+      margin-bottom:1rem;
+    }
+    .card h3 { margin-top:0; margin-bottom:0.5rem; font-size:1.2rem; color: var(--dark); }
+    .card p { margin:0; font-size:0.95rem; color:#555; }
+    footer { background: var(--dark); color:#fff; padding:2rem 1.5rem; text-align:center; font-size:0.9rem; }
+    footer .socials { margin:1rem 0; }
+    footer .socials a { color: var(--primary); margin:0 0.5rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="sunflower_icon_transparent.png" alt="logo">
+      SwankyHive
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="bee.html" class="active">Bee Knowledge</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero">
+    <h1>Bee Knowledge</h1>
+    <p>Discover the fascinating world of bees and learn why they're essential for our planet's ecosystem.</p>
+  </section>
+  <section class="section">
+    <h2>Why Bees Matter</h2>
+    <p>Bees are vital pollinators responsible for a large portion of the food we eat. Many flowering plants and crops depend on bees and other pollinators to produce fruits and seeds, helping maintain biodiversity and feeding communities around the globe.</p>
+    <div class="facts">
+      <div class="card">
+        <div class="icon">1</div>
+        <h3>Five Amazing Eyes</h3>
+        <p>Honeybees have two large compound eyes made of thousands of tiny lenses for color vision and three simple eyes called ocelli on top of their heads that detect light intensity.</p>
+      </div>
+      <div class="card">
+        <div class="icon">2</div>
+        <h3>The Waggle Dance</h3>
+        <p>Bees communicate by performing dances and releasing pheromones. The famous waggle dance tells nest mates the direction and distance to nectar and pollen sources.</p>
+      </div>
+      <div class="card">
+        <div class="icon">3</div>
+        <h3>Busy Producers</h3>
+        <p>A single honeybee produces only about one‑twelfth of a teaspoon of honey in its lifetime, but together a colony can make over 100 pounds of honey each year.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section" style="background:#f7f7f7;">
+    <h2>How You Can Help</h2>
+    <div class="helps">
+      <div class="card">
+        <div class="icon">A</div>
+        <h3>Plant Bee‑Friendly Gardens</h3>
+        <p>Create a haven for bees by planting native flowers and herbs that provide nectar and pollen throughout the growing season. Avoid using pesticides that harm pollinators.</p>
+      </div>
+      <div class="card">
+        <div class="icon">B</div>
+        <h3>Support Beekeepers</h3>
+        <p>Buy local honey and beeswax products to support beekeepers who maintain healthy bee populations. Consider joining or donating to local conservation efforts.</p>
+      </div>
+      <div class="card">
+        <div class="icon">C</div>
+        <h3>Create Bee Habitats</h3>
+        <p>Leave areas of your garden unmowed or provide nesting sites for solitary bees. You can even build or buy bee hotels for native bees.</p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>© 2025 SwankyHive. All rights reserved.</p>
+    <div class="socials">
+      <a href="https://www.instagram.com/swanky_hive" target="_blank">Instagram</a> |
+      <a href="#" target="_blank" title="TikTok coming soon">TikTok</a>
+    </div>
+    <p>Premium eco‑conscious apparel designed to save the bees and protect our planet.</p>
+  </footer>
+</body>
+</html>
